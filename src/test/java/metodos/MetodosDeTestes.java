@@ -19,10 +19,10 @@ public class MetodosDeTestes {
 		String navegador = "Chrome";
 
 		if (navegador.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (navegador.equalsIgnoreCase("Firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "Driver/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else {
 			System.out.println("digite Chrome ou Firefox");
