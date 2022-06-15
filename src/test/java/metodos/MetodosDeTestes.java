@@ -16,13 +16,13 @@ public class MetodosDeTestes {
 	public void iniciarTeste() {
 
 		String url = "https://www.amazon.com.br/";
-		String navegador = "Chrome";
+		String navegador = "Firefox";
 
 		if (navegador.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (navegador.equalsIgnoreCase("Firefox")) {
-			System.setProperty("webdriver.gecko.driver", "Driver/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "Drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else {
 			System.out.println("digite Chrome ou Firefox");
