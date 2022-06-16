@@ -29,15 +29,33 @@ public class Amazon {
 		metodos.clicar(el.getAddCarrinho());
 		metodos.validarSeguro("nao");
 		metodos.validarSeContemTexto("Adicionado ao carrinho");
+		metodos.clicar(el.getIrParaOCarrinho());
 		metodos.fecharNavegador();
 
 	}
 
+	@Test
 	public void excluirProdutoCarrinho() {
+		metodos.preencher(el.getPesquisar(), "iphone 13");
+		metodos.clicar(el.getLupa());
+		metodos.clicarPorPosicao(3);
+		metodos.clicar(el.getAddCarrinho());
+		metodos.validarSeguro("nao");
+		metodos.validarSeContemTexto("Adicionado ao carrinho");
+		metodos.clicar(el.getIrParaOCarrinho());
+		metodos.clicar(el.getExcluirDoCarrinho());
+		metodos.fecharNavegador();
 
 	}
+	
+	@Test
+	public void verificarSeEstoque() {
 
-	public void validarQuantidadeNoEstoque() {
+		metodos.preencher(el.getPesquisar(), "iphone 13");
+		metodos.clicar(el.getLupa());
+		metodos.clicarPorPosicao(3);
+		metodos.verificarEstoque("Em estoque.");
+		metodos.fecharNavegador();
 
 	}
 
